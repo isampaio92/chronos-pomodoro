@@ -1,60 +1,10 @@
-import { Container } from './components/Container';
-import { Logo } from './components/Logo';
-import { Menu } from './components/Menu';
-import { CountDown } from './components/CountDown';
-import { DefaultInput } from './components/DefaultInput';
-import { Cycles } from './components/Cycles';
-import { DefaultButton } from './components/DefaultButton';
-import { Footer } from './components/Footer';
-import { PlayCircleIcon, StopCircleIcon } from 'lucide-react';
+import { Home } from './pages/Home';
 
 import './styles/theme.css';
 import './styles/global.css';
+// import { NotFound } from './pages/NotFound';
+// import { AboutPomodoro } from './pages/AboutPomodoro';
 
 export function App() {
-  return (
-    <>
-      <Container>
-        <Logo />
-      </Container>
-
-      <Container>
-        <Menu />
-      </Container>
-
-      <Container>
-        <CountDown />
-      </Container>
-
-      <Container>
-        <form className='form' action=''>
-          <div className='formRow'>
-            <DefaultInput
-              labelText='task'
-              id='input'
-              type='text'
-              placeholder='placeholder'
-            />
-          </div>
-
-          <div className='formRow'>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-
-          <div className='formRow'>
-            <Cycles />
-          </div>
-
-          <div className='formRow'>
-            <DefaultButton icon={<PlayCircleIcon />} />
-            <DefaultButton icon={<StopCircleIcon />} color='red' />
-          </div>
-        </form>
-      </Container>
-
-      <Container>
-        <Footer />
-      </Container>
-    </>
-  );
+  return <Home />;
 }

@@ -23,6 +23,15 @@ body {
     sans-serif;
   font-size: 1.6rem; /* 16px */
   background: var(--gray-900);
+  background: linear-gradient(
+    135deg,
+    var(--gray-900) 0%,
+    var(--gray-800) 20%,
+    var(--gray-700) 40%,
+    var(--gray-600) 60%,
+    var(--gray-500) 80%,
+    var(--gray-500) 100%
+  );
   color: var(--text-default);
 }
 

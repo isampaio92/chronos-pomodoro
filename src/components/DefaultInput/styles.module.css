@@ -25,3 +25,11 @@
   border-bottom: 0.2rem solid var(--disabled);
   color: var(--text-muted);
 }
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: var(--text-default) !important;
+}

@@ -15,6 +15,7 @@ import { showMessage } from '../../adapters/showMessage';
 export function MainForm() {
   const { state, dispatch } = useTaskContext();
   const taskNameInput = useRef<HTMLInputElement>(null);
+  const lastTaskName = state.tasks[state.tasks.length - 1]?.name || '';
 
   // ciclos
   const nextCycle = getNextCycle(state.currentCycle);
@@ -52,8 +53,8 @@ export function MainForm() {
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
   ) {
     e.preventDefault();
-    showMessage.dismiss()
-    showMessage.error('Tarefa interrompida')
+    showMessage.dismiss();
+    showMessage.error('Tarefa interrompida');
     dispatch({ type: TaskActionTypes.INTERRUPT_TASK });
   }
 
@@ -67,6 +68,7 @@ export function MainForm() {
           placeholder='placeholder'
           ref={taskNameInput}
           disabled={!!state.activeTask}
+          defaultValue={lastTaskName}
         />
       </div>
 
